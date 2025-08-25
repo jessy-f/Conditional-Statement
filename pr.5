@@ -1,0 +1,40 @@
+using System;
+
+public static class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Choose an option:");
+        Console.WriteLine("A. Area of Circle");
+        Console.WriteLine("P. Perimeter of Circle");
+        Console.WriteLine("X. Exit");
+
+        string choice = Console.ReadLine().ToUpper(); 
+
+        switch (choice)
+        {
+            case "A": 
+                Console.WriteLine("Enter the radius:");
+                double radiusA = Convert.ToDouble(Console.ReadLine());
+                double area = 3.14159 * radiusA * radiusA;
+                Console.WriteLine($"The area of the circle with radius {radiusA} is: {area}");
+                break;
+
+            case "P": 
+                Console.WriteLine("Enter the radius:");
+                double radiusP = Convert.ToDouble(Console.ReadLine());
+                double perimeter = 2 * 3.14159 * radiusP;
+                Console.WriteLine($"The perimeter of the circle with radius {radiusP} is: {perimeter}");
+                break;
+
+            case "X":
+                Console.WriteLine("Exiting program...");
+                break;
+
+            default:
+                Console.WriteLine("Invalid choice! Please enter A, P, or X.");
+                break;
+        }
+    }
+}
+
